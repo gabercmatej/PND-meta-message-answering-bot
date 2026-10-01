@@ -1,0 +1,24 @@
+{
+  "entryId": "example.routing.lawyer-consultation",
+  "version": 1,
+  "status": "approved",
+  "origin": "synthetic",
+  "body": {
+    "title": "Povezava s pravnikom za konkretna pravna vprašanja",
+    "content": "Na vprašanja o konkretnem pravnem primeru ne odgovarjamo v komentarjih ali sporočilih. Osebo povežemo s pravnikom, ki primer obravnava posebej.",
+    "factType": "support_route",
+    "factKey": "routing.lawyer-consultation",
+    "structured": null,
+    "language": "sl",
+    "keywords": ["pravnik", "posvet", "pravno vprašanje", "konkreten primer", "odpovedni rok"],
+    "scope": {
+      "platforms": [],
+      "accountExternalIds": [],
+      "campaignProfileIds": []
+    },
+    "validFrom": "2026-09-01T00:00:00.000Z",
+    "validTo": null,
+    "source": "SYNTHETIC EXAMPLE written for the public showcase; not part of any production corpus",
+    "legalAreas": ["delovno", "druzinsko", "obligacijsko_pogodbe"]
+  }
+}

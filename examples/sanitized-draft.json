@@ -1,0 +1,81 @@
+{
+  "item": {
+    "id": "00000000-0000-4000-8000-000000000010",
+    "platform": "facebook",
+    "surface": "direct_message",
+    "senderName": "Ana Kovač",
+    "sender": {
+      "displayName": "Ana Kovač",
+      "username": null,
+      "avatarUrl": null
+    },
+    "preview": "Pozdravljeni, zanima me, kakšen je odpovedni rok pri redni odpovedi pogodbe o zaposlitvi?",
+    "receivedAt": "2026-10-01T08:15:00.000Z",
+    "status": "sent",
+    "statusGroup": "sent",
+    "disposition": null,
+    "hasDraft": true,
+    "urgency": "high",
+    "mode": "REVIEW",
+    "observedInShadow": false,
+    "scheduledFor": null,
+    "sentAt": "2026-10-01T08:21:37.000Z",
+    "sentBy": "reviewer-example",
+    "sentAutomatically": false
+  },
+  "inbound": {
+    "text": "Pozdravljeni, zanima me, kakšen je odpovedni rok pri redni odpovedi pogodbe o zaposlitvi?",
+    "receivedAt": "2026-10-01T08:15:00.000Z",
+    "senderName": "Ana Kovač"
+  },
+  "destination": {
+    "label": "Private Messenger reply",
+    "endpoint": "messenger_send",
+    "isPublic": false,
+    "textLimit": 2000,
+    "platform": "facebook",
+    "surface": "direct_message"
+  },
+  "context": {
+    "post": null,
+    "parent": null,
+    "thread": [],
+    "conversation": []
+  },
+  "draft": {
+    "text": "Pozdravljeni, hvala za vaše vprašanje. Odgovor je odvisen od okoliščin vašega primera, zato vas bomo povezali s pravnikom, ki vam bo lahko pomagal.",
+    "action": "handoff",
+    "riskLevel": "low",
+    "legalArea": { "id": "delovno", "label": "Delovno pravo" },
+    "knowledge": [],
+    "requiresReview": true
+  },
+  "review": {
+    "finalText": "Pozdravljeni, hvala za vaše vprašanje. Odpovedni rok je odvisen od okoliščin vašega primera, zato vas bomo povezali s pravnikom, ki vam bo lahko pomagal. Lep pozdrav.",
+    "reviewer": "reviewer-example",
+    "reviewedAt": "2026-10-01T08:21:05.000Z",
+    "scheduledFor": null,
+    "sentAt": "2026-10-01T08:21:37.000Z",
+    "failureCode": null,
+    "editedByHuman": true,
+    "autoScheduled": false
+  },
+  "blockers": [],
+  "attempts": [
+    {
+      "attemptNo": 1,
+      "state": "succeeded",
+      "startedAt": "2026-10-01T08:21:36.000Z",
+      "finishedAt": "2026-10-01T08:21:37.000Z"
+    }
+  ],
+  "audit": [
+    { "at": "2026-10-01T08:15:58.000Z", "actor": { "kind": "bot", "name": null }, "action": "created", "facts": {} },
+    { "at": "2026-10-01T08:16:04.000Z", "actor": { "kind": "bot", "name": null }, "action": "decided", "facts": { "state": "needs_review" } },
+    { "at": "2026-10-01T08:21:05.000Z", "actor": { "kind": "person", "name": "reviewer-example" }, "action": "edit_send", "facts": { "edited": true, "state": "approved", "textLength": 166 } },
+    { "at": "2026-10-01T08:21:36.000Z", "actor": { "kind": "sending", "name": null }, "action": "send_started", "facts": { "state": "sending", "textLength": 166 } },
+    { "at": "2026-10-01T08:21:37.000Z", "actor": { "kind": "sending", "name": null }, "action": "sent", "facts": { "state": "sent" } }
+  ],
+  "allowedActions": [],
+  "rowVersion": 6
+}

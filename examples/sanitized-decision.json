@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 2,
+  "pipelineVersion": "pipeline-v3",
+  "surface": "direct_message",
+  "action": "handoff",
+  "category": "general_legal_topic",
+  "replyText": "Pozdravljeni, hvala za vaše vprašanje. Odgovor je odvisen od okoliščin vašega primera, zato vas bomo povezali s pravnikom, ki vam bo lahko pomagal.",
+  "replySource": "approved_handoff",
+  "reviewDraft": null,
+  "priority": "high",
+  "reasonCodes": [
+    "GENERAL_EMPLOYMENT_QUESTION",
+    "ROUTE_NEEDS_LAWYER_HANDOFF",
+    "APPROVED_HANDOFF"
+  ],
+  "sourceRefs": [],
+  "validatorFailures": [],
+  "understanding": {
+    "intent": "general_legal_topic",
+    "modelIntent": null,
+    "legalArea": "delovno",
+    "risk": { "level": "low", "flags": [] },
+    "language": "sl",
+    "needsLawyer": true,
+    "summary": "Splošno vprašanje o odpovednem roku pri redni odpovedi pogodbe o zaposlitvi."
+  },
+  "generation": null,
+  "validation": {
+    "deterministic": [],
+    "model": { "verdict": "not_run", "issues": [], "model": null }
+  },
+  "retrieval": {
+    "knowledgeSource": "release_pins",
+    "query": "Pozdravljeni, zanima me, kakšen je odpovedni rok pri redni odpovedi pogodbe o zaposlitvi? odpovedni rok redna odpoved pogodba o zaposlitvi Delovno pravo",
+    "candidates": [
+      {
+        "entryId": "example.routing.lawyer-consultation",
+        "version": 1,
+        "score": 5,
+        "title": "Povezava s pravnikom za konkretna pravna vprašanja"
+      }
+    ],
+    "excluded": [],
+    "contradictions": []
+  },
+  "behavior": {
+    "appliedOverrideIds": [],
+    "conflicts": [],
+    "ruleAction": "review",
+    "plannedAction": "handoff"
+  },
+  "ai": {
+    "providerId": "anthropic",
+    "providerKind": "fresh",
+    "model": "<UNDERSTANDING_MODEL_PINNED_BY_RELEASE>",
+    "outcome": "ok",
+    "attempts": 1,
+    "usage": {
+      "inputTokens": 0,
+      "outputTokens": 0,
+      "cacheWriteTokens": 0,
+      "cacheReadTokens": 0,
+      "costEur": 0
+    },
+    "latencyMs": 0,
+    "promptTemplateVersion": "prompt-v3"
+  },
+  "aiCalls": [
+    {
+      "stage": "understanding",
+      "providerId": "anthropic",
+      "providerKind": "fresh",
+      "model": "<UNDERSTANDING_MODEL_PINNED_BY_RELEASE>",
+      "outcome": "ok",
+      "attempts": 1,
+      "usage": {
+        "inputTokens": 0,
+        "outputTokens": 0,
+        "cacheWriteTokens": 0,
+        "cacheReadTokens": 0,
+        "costEur": 0
+      },
+      "latencyMs": 0,
+      "promptTemplateVersion": "prompt-v3"
+    }
+  ],
+  "release": {
+    "id": "00000000-0000-4000-8000-000000000002",
+    "checksum": "sha256:<RELEASE_MANIFEST_CHECKSUM>"
+  },
+  "inputs": {
+    "snapshotChecksum": "<SHA256_OF_CONTEXT_SNAPSHOT>",
+    "knowledgeChecksum": "<SHA256_OF_PINNED_KNOWLEDGE_REFS>"
+  },
+  "privacy": { "dataPolicy": "redacted", "redactedKinds": [] },
+  "stages": [
+    { "stage": "precheck", "outcome": "pass", "codes": [], "latencyMs": 0 },
+    { "stage": "behavior", "outcome": "base", "codes": [], "latencyMs": 0 },
+    { "stage": "redaction", "outcome": "none", "codes": [], "latencyMs": 0 },
+    { "stage": "understanding", "outcome": "general_legal_topic", "codes": ["GENERAL_EMPLOYMENT_QUESTION"], "latencyMs": 0 },
+    { "stage": "retrieval", "outcome": "1 candidates", "codes": [], "latencyMs": 0 },
+    { "stage": "routing", "outcome": "handoff", "codes": ["ROUTE_NEEDS_LAWYER_HANDOFF"], "latencyMs": 0 },
+    { "stage": "validation", "outcome": "handoff", "codes": ["APPROVED_HANDOFF"], "latencyMs": 0 }
+  ],
+  "evaluatedAt": "2026-10-01T08:16:04.000Z",
+  "codeVersion": "<CODE_VERSION>"
+}

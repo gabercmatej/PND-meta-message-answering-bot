@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Secrets and credentials: never part of this repository
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.p12
+
+# Logs, local data, exports and packages
+*.log
+logs/
+.local/
+*.zip
+*.sql
+!src-showcase/*.sql
+*.dump
+*.tmp
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+.claude/
